@@ -57,6 +57,7 @@
       AFTERNOON = 'afternoon.jpg';
       DUSK = 'dusk.jpg';
       NIGHT = 'night.jpg';
+      NIGHT2 = 'night 2.jpg';
       clkStrOverride = null;
       // clkStrOverride = new Date('2017-12-12T15:02:03-08:00');  // set this variable for debugging purpose
 
@@ -71,8 +72,10 @@
           return AFTERNOON;
         } else if (15 <= hour && hour < 18) {
           return DUSK;
-        } else {
+        } else if (18 <= hour && hour < 21) {
           return NIGHT;
+        } else {
+          return NIGHT2;
         }
       }
       function updateBackground(filename) {
